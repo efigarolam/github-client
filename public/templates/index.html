@@ -1,0 +1,29 @@
+<h1>Github Client App</h1>
+
+<div class='container'>
+  <div class="row">
+    <div class='col-lg-8'>
+      <input type="text" ng-model="username" />
+    </div>
+    <div class="col-lg-4">
+      <input type="button" value="Search Github User" ng-click="searchGithubUser()" />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">
+      <img ng-src="http://gravatar.com/avatar/{{githubUser.gravatar_id}}" />
+    </div>
+    <div class="col-lg-9">
+      <p>{{githubUser.login}}</p>
+      <p>{{githubUser.followers}}</p>
+      <a href="http://{{githubUser.blog}}">{{githubUser.blog}}</a>
+    </div>
+  </div>
+
+  <user-repos></user-repos>
+</div>
+
+

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Forks</th>
+      <th>Stargazers</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="repo in userRepos | orderBy:'-stargazers_count' | limitTo:5">
+      <td>{{repo.name}}</td>
+      <td>{{repo.description | limitTo:20}}</td>
+      <td>{{repo.forks | currency}}</td>
+      <td>{{repo.stargazers_count | number:2}}</td>
+      <td>{{repo.created_at | date:'short'}}</td>
+    </tr>
+  </tbody>
+</table>
